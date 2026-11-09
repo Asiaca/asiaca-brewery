@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asiaca Brewing | Small Batches. Big Impressions.</title>
-  
-  <!-- Favicon Fallback -->
-  <link rel="icon" type="image/png" href="images/logo.png" onerror="this.href='https://placehold.co/64x64/1a120b/f59e0b?text=AB'">
-  
+ 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo-centered.svg" onerror="this.href='images/logo.png'">
+ 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+ 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+ 
   <!-- Tailwind Custom Configuration -->
   <script>
     tailwind.config = {
@@ -42,22 +42,22 @@
 
 <body class="bg-[#0c0d10] text-zinc-100 font-sans antialiased selection:bg-amber-500/30 selection:text-amber-200 min-h-screen flex flex-col justify-between">
 
-  <!-- Fixed Navigation -->
+  <!-- Fixed Navigation Bar -->
   <nav class="sticky top-0 z-40 bg-[#0c0d10]/95 backdrop-blur-md border-b border-amber-950/40">
     <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
-        <img 
-          src="images/logo.png" 
-          alt="Asiaca Brewing Logo" 
-          onerror="this.onerror=null; this.src='https://placehold.co/120x120/181410/f59e0b?text=Asiaca';"
-          class="w-12 h-12 rounded-full border border-amber-500/40 object-cover shadow-lg shadow-amber-500/10"
+        <img
+          src="images/logo-centered.svg"
+          alt="Asiaca Brewing Logo"
+          onerror="this.onerror=null; this.src='images/logo.png';"
+          class="w-12 h-12 rounded-full border border-amber-500/40 object-cover shadow-lg shadow-amber-500/10 group-hover:border-amber-400 transition-colors"
         >
         <div>
           <span class="font-serif text-xl font-bold tracking-wide text-amber-100 group-hover:text-amber-400 transition-colors">ASIACA BREWING</span>
           <p class="text-[10px] uppercase tracking-widest text-zinc-400">Park Ridge, Illinois</p>
         </div>
       </a>
-      
+     
       <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-zinc-300">
         <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
         <a href="#beers" class="hover:text-amber-400 transition-colors">The Beers</a>
@@ -67,29 +67,28 @@
   </nav>
 
   <main>
-    <!-- Hero Header -->
-    <header class="relative pt-16 pb-20 px-4 overflow-hidden border-b border-zinc-800/60 bg-gradient-to-b from-[#14161d] to-[#0c0d10]">
-      <div class="max-w-4xl mx-auto text-center relative z-10">
-        <div class="inline-block p-1.5 rounded-full border border-amber-500/30 bg-amber-950/30 mb-6 shadow-2xl">
-          <img 
-            src="images/logo.png" 
-            alt="Asiaca Brewing" 
-            onerror="this.onerror=null; this.src='https://placehold.co/300x300/1c1510/f59e0b?text=Asiaca+Brewing';"
-            class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-2 border-amber-500/60 shadow-inner"
-          >
-        </div>
-        <p class="text-xs uppercase tracking-[0.3em] text-amber-400 font-semibold mb-3">Jazz-Inspired Craft Ales</p>
-        <h1 class="font-serif text-4xl md:text-6xl font-extrabold text-zinc-100 tracking-tight leading-tight mb-4">
-          Small Batches. <span class="text-amber-400 italic">Big Impressions.</span>
-        </h1>
-        <p class="text-zinc-400 max-w-xl mx-auto text-base md:text-lg mb-8 leading-relaxed">
-          Where every beer swings to its own rhythm. Handcrafted micro-batches brewed with patience, soul, and a turntable spinning in Park Ridge, IL.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#beers" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs uppercase tracking-wider rounded-lg transition-all shadow-lg shadow-amber-500/20">
-            Explore The Beers
+    <!-- Panoramic Top Banner Hero with Centered Logo -->
+    <header class="relative border-b border-amber-500/30 overflow-hidden bg-[#0a0a0c]">
+      <!-- Background Banner Image with Fallback Hierarchy -->
+      <div class="relative w-full h-[360px] sm:h-[460px] md:h-[560px] lg:h-[620px] overflow-hidden flex items-center justify-center">
+        <!-- SVG Master Banner (with Centered Yin-Yang & Full Africa Outline) -->
+        <img
+          src="images/banner.svg"
+          alt="Asiaca Brewing Jazz and Beer Banner with Centered Logo"
+          onerror="this.onerror=null; this.src='images/banner.jpg';"
+          class="w-full h-full object-cover object-center filter brightness-95 contrast-105"
+        >
+       
+        <!-- Subtle Vignette Overlays for Depth and Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-black/30 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 pointer-events-none"></div>
+
+        <!-- Call-to-Action Bar Anchored at the Bottom of Banner -->
+        <div class="absolute bottom-6 md:bottom-10 inset-x-0 flex flex-wrap justify-center gap-4 px-4 z-10">
+          <a href="#beers" class="px-7 py-3 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl shadow-amber-500/30 hover:scale-105">
+            Explore The Taplist
           </a>
-          <a href="#suggest" class="px-6 py-3 bg-zinc-900 hover:bg-zinc-800 border border-amber-500/30 text-amber-200 font-bold text-xs uppercase tracking-wider rounded-lg transition-all">
+          <a href="#suggest" class="px-7 py-3 bg-black/85 hover:bg-black border border-amber-500/50 text-amber-200 font-bold text-xs uppercase tracking-widest rounded-xl transition-all hover:border-amber-400 backdrop-blur-sm">
             Suggest a Recipe
           </a>
         </div>
@@ -135,13 +134,13 @@
 
       <!-- Beer Cards Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+       
         <!-- 1. Birth of the Cool -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/birth-of-the-cool.png', 'Birth of the Cool')">
-            <img 
-              src="images/birth-of-the-cool.png" 
-              alt="Birth of the Cool" 
+            <img
+              src="images/birth-of-the-cool.png"
+              alt="Birth of the Cool"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/1e1710/f59e0b?text=Birth+of+the+Cool';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -155,7 +154,7 @@
               <p class="text-xs text-amber-300 italic mb-4 font-serif">"Smooth. Balanced. Cool."</p>
               <div class="text-xs text-zinc-300 space-y-3 leading-relaxed mb-6">
                 <p>
-                  Inspired by the groundbreaking jazz movement that redefined what music could be, Birth of the Cool is the beer that started it all. This American Amber Ale strikes a harmonious balance between rich caramel malt character and a subtle hop presence, creating a smooth and approachable drinking experience.
+                  Inspired by the groundbreaking jazz movement that redefined what music could be, Birth of the Cool is the beer that started it all. This American Amber Ale strikes a harmonious balance between rich caramel malt character and a subtle hop presence.
                 </p>
                 <p>
                   Like a late-night jazz set that never feels rushed, every sip unfolds with layers of toasted bread, light toffee, and gentle citrus notes.
@@ -172,9 +171,9 @@
         <!-- 2. Body and Soul -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/body-and-soul.png', 'Body and Soul')">
-            <img 
-              src="images/body-and-soul.png" 
-              alt="Body and Soul" 
+            <img
+              src="images/body-and-soul.png"
+              alt="Body and Soul"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/110f13/d97706?text=Body+and+Soul';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -205,9 +204,9 @@
         <!-- 3. Blue Train -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/blue-train.png', 'Blue Train')">
-            <img 
-              src="images/blue-train.png" 
-              alt="Blue Train" 
+            <img
+              src="images/blue-train.png"
+              alt="Blue Train"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/0d1624/60a5fa?text=Blue+Train';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -238,9 +237,9 @@
         <!-- 4. Crimson Swing -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/crimson-swing.png', 'Crimson Swing')">
-            <img 
-              src="images/crimson-swing.png" 
-              alt="Crimson Swing" 
+            <img
+              src="images/crimson-swing.png"
+              alt="Crimson Swing"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/220c10/ef4444?text=Crimson+Swing';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -271,9 +270,9 @@
         <!-- 5. 'Round About Midnight -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/round-about-midnight.png', '\'Round About Midnight')">
-            <img 
-              src="images/round-about-midnight.png" 
-              alt="'Round About Midnight" 
+            <img
+              src="images/round-about-midnight.png"
+              alt="'Round About Midnight"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/0b0b0e/94a3b8?text=Round+About+Midnight';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -290,7 +289,7 @@
                   Named for one of jazz's most iconic compositions, 'Round About Midnight captures the mystery and elegance of the late-night hours.
                 </p>
                 <p>
-                  This black lager delivers subtle roast character, hints of chocolate, and a remarkably clean finish. Dark in appearance but surprisingly light and crisp.
+                  This black lager delivers subtle roast character, hints of chocolate, and a remarkably clean finish.
                 </p>
               </div>
             </div>
@@ -304,9 +303,9 @@
         <!-- 6. Winter Jam Session -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500/50 transition-all flex flex-col group shadow-lg">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/winter-jam-session.png', 'Winter Jam Session')">
-            <img 
-              src="images/winter-jam-session.png" 
-              alt="Winter Jam Session" 
+            <img
+              src="images/winter-jam-session.png"
+              alt="Winter Jam Session"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/221013/ef4444?text=Winter+Jam+Session';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -337,9 +336,9 @@
         <!-- 7. A Love Supreme -->
         <div class="bg-[#121419] rounded-2xl overflow-hidden border border-amber-500/30 hover:border-amber-400 transition-all flex flex-col group shadow-lg ring-1 ring-amber-500/20">
           <div class="bg-black/40 p-4 flex justify-center items-center cursor-pointer min-h-[320px]" onclick="openLightbox('images/a-love-supreme.png', 'A Love Supreme')">
-            <img 
-              src="images/a-love-supreme.png" 
-              alt="A Love Supreme" 
+            <img
+              src="images/a-love-supreme.png"
+              alt="A Love Supreme"
               onerror="this.onerror=null; this.src='https://placehold.co/400x600/1e170c/f59e0b?text=A+Love+Supreme';"
               class="h-80 w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             >
@@ -379,23 +378,23 @@
           <p class="text-zinc-400 text-sm">Have a beer style or jazz track we should brew next? Drop your concept into the queue!</p>
         </div>
 
-        <!-- Direct Formspree Submission -->
-        <form 
-          action="https://formspree.io/f/mzeeokez" 
-          method="POST" 
+        <!-- Formspree Submission -->
+        <form
+          action="https://formspree.io/f/mzeeokez"
+          method="POST"
           class="space-y-4 bg-[#0c0d10] p-6 md:p-8 rounded-2xl border border-amber-500/20 shadow-xl"
         >
-          <!-- Email subject header seen in your inbox -->
+          <!-- Email subject line in your inbox -->
           <input type="hidden" name="_subject" value="New Beer Suggestion from Asiaca Brewing!">
 
           <div>
             <label for="beer-name" class="block text-xs uppercase tracking-wider text-amber-300 font-semibold mb-1">Proposed Beer Name</label>
-            <input 
-              type="text" 
-              id="beer-name" 
-              name="Beer Name" 
-              required 
-              placeholder="e.g. A Love Supreme" 
+            <input
+              type="text"
+              id="beer-name"
+              name="Beer Name"
+              required
+              placeholder="e.g. A Love Supreme"
               class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
             >
           </div>
@@ -403,23 +402,23 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label for="beer-style" class="block text-xs uppercase tracking-wider text-amber-300 font-semibold mb-1">Beer Style</label>
-              <input 
-                type="text" 
-                id="beer-style" 
-                name="Beer Style" 
-                required 
-                placeholder="e.g. Session IPA" 
+              <input
+                type="text"
+                id="beer-style"
+                name="Beer Style"
+                required
+                placeholder="e.g. Session IPA"
                 class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
               >
             </div>
             <div>
               <label for="user-name" class="block text-xs uppercase tracking-wider text-amber-300 font-semibold mb-1">Your Name</label>
-              <input 
-                type="text" 
-                id="user-name" 
-                name="Suggested By" 
-                required 
-                placeholder="e.g. Dave B." 
+              <input
+                type="text"
+                id="user-name"
+                name="Suggested By"
+                required
+                placeholder="e.g. Dave B."
                 class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
               >
             </div>
@@ -427,28 +426,28 @@
 
           <div>
             <label for="user-email" class="block text-xs uppercase tracking-wider text-amber-300 font-semibold mb-1">Your Email (Optional)</label>
-            <input 
-              type="email" 
-              id="user-email" 
-              name="Email" 
-              placeholder="e.g. dave@example.com" 
+            <input
+              type="email"
+              id="user-email"
+              name="Email"
+              placeholder="e.g. dave@example.com"
               class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
             >
           </div>
 
           <div>
             <label for="beer-notes" class="block text-xs uppercase tracking-wider text-amber-300 font-semibold mb-1">Flavor Notes / Jazz Inspiration</label>
-            <textarea 
-              id="beer-notes" 
-              name="Flavor Notes and Inspiration" 
-              rows="3" 
-              placeholder="Tell us about the ingredients or vibe (e.g. toasted oak, plum, Coltrane tenor sax vibes)..." 
+            <textarea
+              id="beer-notes"
+              name="Flavor Notes and Inspiration"
+              rows="3"
+              placeholder="Tell us about the ingredients or vibe (e.g. toasted oak, plum, Coltrane tenor sax vibes)..."
               class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
             ></textarea>
           </div>
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold uppercase tracking-wider text-xs rounded-lg transition-colors cursor-pointer shadow-lg shadow-amber-500/20 active:scale-[0.99]"
           >
             Submit Recipe Concept
@@ -469,10 +468,10 @@
   <!-- Footer -->
   <footer class="py-12 text-center border-t border-zinc-900 text-xs text-zinc-500 bg-[#0a0b0e]">
     <div class="flex justify-center mb-4">
-      <img 
-        src="images/logo.png" 
-        alt="Asiaca Brewing" 
-        onerror="this.onerror=null; this.src='https://placehold.co/80x80/1a120b/f59e0b?text=AB';"
+      <img
+        src="images/logo-centered.svg"
+        alt="Asiaca Brewing"
+        onerror="this.onerror=null; this.src='images/logo.png';"
         class="w-10 h-10 rounded-full border border-amber-500/30 object-cover opacity-80"
       >
     </div>
